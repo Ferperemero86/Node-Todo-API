@@ -37,7 +37,7 @@ app.get('/todos/:id', (req,res) => {
      return res.status(404).send();
   }
   //FindById
-  User.findById(id).then((todo) => {
+  Todo.findById(id).then((todo) => {
     //Success
     // If no todo - send back 404 with empty body
     if (!todo) {
